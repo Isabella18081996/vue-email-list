@@ -12,8 +12,13 @@
   <div id="app">
     <ul>
       <li 
-      v-for="email in arrayEmail">
+      v-for="email in arrayEmail"
+      v-if="arrayEmail.length === 10">
       {{email}}
+      </li>
+      <li
+      v-if="arrayEmail.length !== 10">
+        Loading...
       </li>
     </ul>
 
